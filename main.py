@@ -37,7 +37,7 @@ client = OpenAI(
 )
 
 # Convert image to base64 data URL
-image_path = r"D:\Melbin\SELF\openRouter\static\1357373.jpeg"
+image_path = r"D:\Melbin\SELF\openRouter\static\ex02.png"
 image_data_url = encode_image_to_base64(image_path)
 
 completion = client.chat.completions.create(

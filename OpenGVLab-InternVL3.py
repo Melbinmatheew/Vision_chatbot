@@ -37,36 +37,32 @@ client = OpenAI(
 )
 
 # Convert image to base64 data URL
-image_path = r"D:\Melbin\SELF\openRouter\static\ex02.png"
+image_path = r"D:\Melbin\SELF\openRouter\static\02_page_2.jpg"
 image_data_url = encode_image_to_base64(image_path)
 
 completion = client.chat.completions.create(
-    extra_headers={
-        "HTTP-Referer": "<YOUR_SITE_URL>",
-        "X-Title": "<YOUR_SITE_NAME>",
-    },
-    model="mistralai/mistral-small-3.1-24b-instruct:free",
-    messages=[
-        {
-            "role": "system",
-            "content": "You are an AI assistant that describes images in detail."
-        },
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "What is in this image?"
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": image_data_url
-                    }
-                }
-            ]
+  extra_headers={
+    "HTTP-Referer": "<YOUR_SITE_URL>", # Optional. Site URL for rankings on openrouter.ai.
+    "X-Title": "<YOUR_SITE_NAME>", # Optional. Site title for rankings on openrouter.ai.
+  },
+  extra_body={},
+  model="opengvlab/internvl3-14b:free",
+  messages=[
+    {
+        "role": "user",
+        "content": [
+            {
+                "type": "text",
+                "text": "What is the area of room 218?"
+            },
+            {
+                "type": "image_url",
+                "image_url": {
+                    "url": image_data_url
+          }
         }
-    ]
+      ]
+    }
+  ]
 )
-
 print(completion.choices[0].message.content)

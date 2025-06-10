@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Melbin/SELF/openRouter/mlruns/104373439793671490/4939b11057be4370870cf93d00ca0456/artifacts
+end_time: 1749533341462
+entry_point_name: ''
+experiment_id: '104373439793671490'
+lifecycle_stage: active
+run_id: 4939b11057be4370870cf93d00ca0456
+run_name: inference_20250610_105848
+run_uuid: 4939b11057be4370870cf93d00ca0456
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1749533329067
+status: 3
+tags: []
+user_id: Planet

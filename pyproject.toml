@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "load-dotenv>=0.1.0",
+    "mlflow>=2.22.1",
     "openai>=1.84.0",
     "python-dotenv>=1.1.0",
 ]

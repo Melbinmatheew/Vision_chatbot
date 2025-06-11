@@ -56,7 +56,7 @@ completion = client.chat.completions.create(
             "content": [
                 {
                     "type": "text",
-                    "text": "What is the area of room 210?"
+                    "text": "What is the area of room 218?"
                 },
                 {
                     "type": "image_url",
